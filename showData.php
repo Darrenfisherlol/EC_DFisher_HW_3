@@ -1,6 +1,17 @@
-
+<!--
+--  Darren Fisher
+--  Homework 3
+-->
 <?php require_once("indexHeader.php")?>
 
+
+    <div>
+        <div>       
+            You wanted: <?php echo $_POST["BuildingName"]; ?><br>
+            Your school is: <?php echo $_POST["TeacherName"]; ?><br>
+            Your favorite class is: <?php echo $_POST["StudentId"]; ?>            
+        </div>
+    </div>
 
 
     <?php

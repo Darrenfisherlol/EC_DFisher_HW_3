@@ -9,8 +9,16 @@
     background-color: azure;
     height: 50px;
     font-size: 25px;
-    line-height: 50px;
+    line-height: 25px;
 }
+#Background{
+    background-color: lightblue;
+    height: 100%;
+    width: 100%;
+}
+
+
+
 #divTwo{
     background-color: lightskyblue;
     height: 100px;
@@ -28,11 +36,7 @@
     float: left;
     width: 100%;
 }
-#Background{
-    background-color: lightblue;
-    height: 100%;
-    width: 100%;
-}
+
    
 
 

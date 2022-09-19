@@ -9,12 +9,10 @@
 
 
         <div id="divOne">
-            <div>       
-                The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
-                The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br>
-                Your StudentId is: <?php echo $_POST["StudentId"]; ?>    
-                The ProfessorID is: <?php echo $_POST["ProfessorID"]; ?>    
-            </div>
+            The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
+            The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br>
+            Your StudentId is: <?php echo $_POST["StudentId"]; ?><br>    
+            The ProfessorID is: <?php echo $_POST["ProfessorID"]; ?>    
         </div>
 
 
@@ -38,7 +36,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT ClassId, ClassName FROM Class";
+        $sql = "SELECT ClassId, ClassName, BuildingId FROM Class";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

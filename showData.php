@@ -40,7 +40,12 @@
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["ClassId"]. " - Name: " . $row["ClassName"]. "<br>";
+    ?>
+        <tr>
+            <td><?=$row["ClassId"]?></td>
+            <td><?=$row["ClassName"]?></td>
+        </td>
+    <?php
         }
     } 
     else {

@@ -2,6 +2,9 @@
 --  Darren Fisher
 --  Homework 3
 -->
+
+index test
+
 <?php require_once("indexHeader.php")?>
 
 <div id="divOne">

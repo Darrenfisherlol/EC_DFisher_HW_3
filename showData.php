@@ -15,12 +15,15 @@
             The ProfessorID is: <?php echo $_POST["ProfessorID"]; ?>    
         </div>
 
+        <br>
+        <br>
+        <br>
 
         <?php
             $servername = "localhost";
             $username = "darrenfi_homework3";
             $password = "MISHomework3";
-
+            $dbname = "darrenfi_homework_3";
         // Create connection
         $conn = new mysqli($servername, $username, $password);
 
@@ -46,6 +49,8 @@
             <tr>
                 <td><?=$row["ClassId"]?></td>
                 <td><?=$row["ClassName"]?></td>
+                <td><?=$row["BuildingId"]?></td>
+
             </td>
         <?php
             }

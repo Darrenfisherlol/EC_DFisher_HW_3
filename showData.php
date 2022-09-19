@@ -3,11 +3,7 @@
 --  Homework 3
 -->
 
-show data test
-
-
-<?php require_once("indexHeader.php")?>
-
+<?php require_once("header.php")?>
 
     <div>
         <div>       

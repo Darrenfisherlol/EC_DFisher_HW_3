@@ -3,15 +3,10 @@
 --  Homework 3
 -->
 
-TEST index 
 
 <?php require_once("header.php")?>
 
-TEST index 2
-
 <div id="divOne">
-
-TEST index 3
 
     <form action="handlepost.php" method="post">
         Adams or Price? : <input type="text" name="BuildingName"><br>

@@ -5,9 +5,9 @@
 
 TEST index 
 
-<?php require_once("indexHeader.php")?>
+<?php require_once("header.php")?>
 
-TEST index  2
+TEST index 2
 
 <div id="divOne">
 

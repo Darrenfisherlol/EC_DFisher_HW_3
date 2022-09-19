@@ -3,7 +3,7 @@
 --  Homework 3
 -->
 
-index test
+TEST index 
 
 <?php require_once("indexHeader.php")?>
 

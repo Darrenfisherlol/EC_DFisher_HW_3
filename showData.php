@@ -2,6 +2,10 @@
 --  Darren Fisher
 --  Homework 3
 -->
+
+show data test
+
+
 <?php require_once("indexHeader.php")?>
 
 
@@ -49,5 +53,3 @@
 
     $conn->close();
     ?>
-
-

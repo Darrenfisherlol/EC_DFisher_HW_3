@@ -19,7 +19,8 @@
         <!-- Pages -->
         <div>
             <a class="btn btn-primary" href="index.php"  role="button">Home Page </a> 
-            <a class="btn btn-primary" href="showData.php"  role="button">Show Data Page </a> 
+            <a class="btn btn-primary" href="showData.php"  role="button">Show Data Page One </a> 
+            <a class="btn btn-primary" href="showDataTwo.php"  role="button">Show Data Page Two </a> 
         </div>
 
         <div>

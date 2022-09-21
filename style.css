@@ -15,6 +15,7 @@
     background-color: lightblue;
     height: 100%;
     width: 100%;
+    font-weight: 400;
 }
 #headerShowDate{
     background-color: azure;
@@ -33,5 +34,5 @@
 }
 #HeaderForDesc{
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
 }

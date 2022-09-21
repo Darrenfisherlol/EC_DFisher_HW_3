@@ -17,18 +17,18 @@
     width: 100%;
 }
 
-#divTwo{
+#headerShowDate{
     background-color: azure;
     height: 100px;
     font-size: 25px;
     line-height: 25px;
+    width: 50%;
+    float: left;
 }
 
-
-
-#divThree{
+#middleDatashow{
     background-color: lightblue;
-    height: 200px;
+    height: 100;
     text-align: center;
     line-height: 200px;
     float: left;

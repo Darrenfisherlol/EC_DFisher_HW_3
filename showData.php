@@ -18,7 +18,7 @@
         <br>
 
 
-        <div> 
+        <div id="middleDatashow"> 
 
             <div>
                 This will print out all building info
@@ -56,9 +56,10 @@
                     <tr>
                         <td> Builidng id: <?=$row["BuildingId"]?></td>
                         <br>
-                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <td> Building Name <?=$row["BuildingName"]?></td>
                         <br>
                         <td> Class Id<?=$row["ClassId"]?></td>
+                        <br>
                     </td>
                 <?php
                     }
@@ -77,8 +78,6 @@
         <br>
         <br>
 
-
-        <!-- 2nd middle part of page -->
         <div id="middleDatashow">
             
             <div> 
@@ -136,8 +135,7 @@
         <br>
 
 
-        <!-- TESTER -->
-        <div>
+        <div id="middleDatashow">
 
             <div> 
                 Print below the building the user entered
@@ -199,7 +197,7 @@
         <br>
 
 
-        <div>
+        <div id="middleDatashow">
 
             <div> 
                 Print below the building the user entered with class id 

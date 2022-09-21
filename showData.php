@@ -13,74 +13,82 @@
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br> 
         </div>
 
-
-        <br>
-        <br>
-
         <div id="ShowTwoInputs">
             <div id="ShowTwoInputsHalf">
+                AAA
+            </div>
+            <div id="ShowTwoInputsHalf">
+                BBB
+            </div>
+        </div>
 
-                <div> 
-                    Print below the building the user entered
-                </div>
 
-                <?php
+        <br>
+        <br>
 
-                    $servername = "localhost";
-                    $username = "darrenfi_homework3";
-                    $password = "MISHomework3";
-                    $dbname = "darrenfi_homework_3";
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password);
+        <div id="middleDatashow">
 
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $Varname = $_POST["BuildingName"];  
-
-                    $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
-
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                    ?>
-                        <tr>
-                            <td> Builidng id: <?=$row["BuildingId"]?></td>
-                            <br>
-                            <td> Building Name <?=$row["Buildingname"]?></td>
-                            <br>
-                            <td> Class Id<?=$row["ClassId"]?></td>
-                        </td>
-                    <?php
-                        }
-                    } 
-                    else {
-                        echo "0 results";
-                    }
-
-                    $conn->close();
-                ?>
-
+            <div> 
+                Print below the building the user entered
             </div>
 
+            <?php
+
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $Varname = $_POST["BuildingName"];  
+
+                $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Builidng id: <?=$row["BuildingId"]?></td>
+                        <br>
+                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <br>
+                        <td> Class Id<?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
+
+                $conn->close();
+            ?>
+
+        </div>
+
 
             <br>
             <br>
             <br>
 
 
-            <div id="ShowTwoInputsHalf">
+            <div id="middleDatashow">
 
                 <div> 
                     Print below the building the user entered with class id 
@@ -134,7 +142,7 @@
                     $conn->close();
                 ?>
             </div>
-        </div>
+       
         
 
             

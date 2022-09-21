@@ -49,4 +49,6 @@
     font-size: 15px;
     line-height: 25px;
     width: 100%;
+    border: 1cm;
+    border-style: solid;
 }

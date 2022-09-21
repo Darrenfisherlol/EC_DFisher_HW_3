@@ -122,6 +122,51 @@
         <div>
            
 
+
+            <?php
+                    $servername = "localhost";
+                    $username = "darrenfi_homework3";
+                    $password = "MISHomework3";
+                    $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT BuildingId, BuildingName, ClassId FROM Building WHERE BuildingName like '<?php echo $_POST["BuildingName"]; ?>' ";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                    <td><?=$row["BuildingId"]?></td>
+                        <br>
+                        <td><?=$row["Buildingname"]?></td>
+                        <br>
+                        <td><?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
+
+            $conn->close();
+            ?>
+
         </div>
 
     </div>

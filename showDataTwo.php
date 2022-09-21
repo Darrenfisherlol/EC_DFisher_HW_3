@@ -14,10 +14,9 @@
         <thead>
             <tr>
                 <th>ProfessorID</th>
-                <th>Prefix</th>
-                <th>Number</th>
-                <th>Section</th>
-                <th>Instructor</th>
+                <th>ProfessorName</th>
+                <th>SpellCastingLevel</th>
+                <th>BuildingID</th>
             </tr>
         </thead>
             <tbody>
@@ -37,7 +36,7 @@
                 $iid = $_GET['ProfessorID'];
                 //echo $iid;
 
-                $sql = "select ProfessorID, Professorname, SpellCastingLevel, b.BuildingID from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID=" . $iid;
+                $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID=" . $iid;
                 //echo $sql;
                 $result = $conn->query($sql);
 
@@ -46,11 +45,10 @@
                 while($row = $result->fetch_assoc()) {
                 ?>
                     <tr>
-                    <td><?=$row["section_id"]?></td>
-                    <td><?=$row["prefix"]?></td>
-                    <td><?=$row["number"]?></td>
-                    <td><?=$row["section_number"]?></td>
-                    <td><?=$row["instructor_name"]?></td>
+                    <td><?=$row["ProfessorID"]?></td>
+                    <td><?=$row["ProfessorName"]?></td>
+                    <td><?=$row["SpellCastingLevel"]?></td>
+                    <td><?=$row["BuildingID"]?></td>
                     </tr>
                 <?php
                 }

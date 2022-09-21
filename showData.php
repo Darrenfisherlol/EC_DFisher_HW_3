@@ -191,7 +191,7 @@
         </div>
 
 
-        <div id="middleDatashow">
+        <div id="middleDataShowBigger">
             
             <div id="HeaderForDesc"> 
                 Href print below
@@ -222,7 +222,10 @@
             ?>
             <tr>
                 <td><?=$row["ProfessorID"]?></td>
-                <td><a href="showDataTwo.php?id=<?=$row["ProfessorID"]?>"><?=$row["ProfessorName"]?></a></td>
+                <td>
+                    <a href="showDataTwo.php?id=<?=$row["ProfessorID"]?>"><?=$row["ProfessorName"]?></a> 
+                    <br>                   
+                </td>
             </tr>
             <?php
             }

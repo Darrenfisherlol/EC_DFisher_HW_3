@@ -179,7 +179,7 @@
 
             $Varname = $_POST["ClassId"];  
 
-            $sql = "SELECT * FROM Class WHERE ClassId like '" . $Varname . "'";
+            $sql = "SELECT * FROM Class WHERE ClassId = $Varname";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

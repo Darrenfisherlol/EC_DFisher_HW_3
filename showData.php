@@ -19,6 +19,18 @@
         <br>
         <br>
 
+        <div>       
+            Hi <?php echo $_POST["BuildingName"]; ?><br>
+            Your school is: <?php echo $_POST["ProfessorID"]; ?><br>
+            Your favorite class is: <?php echo $_POST["StudentId"]; ?>            
+        </div>
+
+
+
+        <br>
+        <br>
+        <br>
+
         <?php
             $servername = "localhost";
             $username = "darrenfi_homework3";

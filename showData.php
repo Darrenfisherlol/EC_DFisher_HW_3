@@ -13,68 +13,77 @@
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br> 
         </div>
 
-        <br>
-        
-        <?php
 
-        $servername = "localhost";
-        $username = "darrenfi_homework3";
-        $password = "MISHomework3";
-        $dbname = "darrenfi_homework_3";
-        // Create connection
-        $conn = new mysqli($servername, $username, $password);
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        $sql = "SELECT * FROM Building";
-
-        echo $sql;
-
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td> Builidng id: <?=$row["BuildingId"]?></td>
-                <br>
-                <td> Building Name <?=$row["Buildingname"]?></td>
-                <br>
-                <td> Class Id<?=$row["ClassId"]?></td>
-            </td>
-        <?php
-            }
-        } 
-        else {
-            echo "0 results";
-        }
-
-        $conn->close();
-        ?>
-
-
-        <br>
-        <div>^^ get all from class where class id = what user input</div>
         <br>
         <br>
 
 
+        <div> 
 
-    <!-- 2nd middle part of page -->
-    <div id="middleDatashow">
+            <div>
+                This will print out all building info
+            </div>
+
+            <?php
+
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM Building";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Builidng id: <?=$row["BuildingId"]?></td>
+                        <br>
+                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <br>
+                        <td> Class Id<?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
+
+                $conn->close();
+            ?>
+
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+
+        <!-- 2nd middle part of page -->
+        <div id="middleDatashow">
             
-            The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
+            <div> 
+                Href print below
+            </div>
 
             <?php
 
@@ -123,127 +132,127 @@
 
 
         <br>
-        <div>^^ User chooses href to go to another page & sort by it</div>
+        <br>
         <br>
 
 
-    <!-- TESTER -->
-    <div>
+        <!-- TESTER -->
+        <div>
 
-        <?php
+            <div> 
+                Print below the building the user entered
+            </div>
 
-        $servername = "localhost";
-        $username = "darrenfi_homework3";
-        $password = "MISHomework3";
-        $dbname = "darrenfi_homework_3";
-        // Create connection
-        $conn = new mysqli($servername, $username, $password);
+            <?php
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
 
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-        $Varname = $_POST["BuildingName"];  
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-        $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
+                $Varname = $_POST["BuildingName"];  
 
-        echo $sql;
+                $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
 
-        $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td> Builidng id: <?=$row["BuildingId"]?></td>
-                <br>
-                <td> Building Name <?=$row["Buildingname"]?></td>
-                <br>
-                <td> Class Id<?=$row["ClassId"]?></td>
-            </td>
-        <?php
-            }
-        } 
-        else {
-            echo "0 results";
-        }
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Builidng id: <?=$row["BuildingId"]?></td>
+                        <br>
+                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <br>
+                        <td> Class Id<?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
 
-        $conn->close();
-        ?>
+                $conn->close();
+            ?>
 
         </div>
 
+
         <br>
-        <div>^^ Sorts by what the user entered as a building name</div>
+        <br>
         <br>
 
 
         <div>
 
-        <?php
-        
-        $servername = "localhost";
-        $username = "darrenfi_homework3";
-        $password = "MISHomework3";
-        $dbname = "darrenfi_homework_3";
-        // Create connection
-        $conn = new mysqli($servername, $username, $password);
+            <div> 
+                Print below the building the user entered with class id 
+            </div>
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+            <?php
+                
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
 
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-        $Varname = $_POST["ClassId"];  
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-        $sql = "SELECT * FROM Class WHERE ClassId = $Varname";
+                $Varname = $_POST["ClassId"];  
 
-        echo $sql;
+                $sql = "SELECT * FROM Class WHERE ClassId = $Varname";
 
-        $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td> class id: <?=$row["ClassId"]?></td>
-                <br>
-                <td> class Name <?=$row["ClassName"]?></td>
-                <br>
-                <td> building Id<?=$row["BuildingId"]?></td>
-            </td>
-        <?php
-            }
-        } 
-        else {
-            echo "0 results";
-        }
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> class id: <?=$row["ClassId"]?></td>
+                        <br>
+                        <td> class Name <?=$row["ClassName"]?></td>
+                        <br>
+                        <td> building Id<?=$row["BuildingId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
 
-        $conn->close();
-        ?>
-
-        <br>
-        <div>^^ user choose class id amd ^ displays it </div>
-        <br>
-
-    </div>
+                $conn->close();
+            ?>
+        </div>
 
 
 

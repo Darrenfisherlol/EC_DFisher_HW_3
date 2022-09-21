@@ -9,6 +9,10 @@
 
         <!-- This is the 1st 1/2 of the page top section-->
         <div id="headerShowDate">
+        
+        <div id="HeaderForDesc">
+            Here is your input:
+        </div>
             The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br> 
         </div>
@@ -17,10 +21,11 @@
         <br>
         <br>
 
+
         <div id="middleDatashow">
 
-            <div> 
-                Print below the building the user entered
+            <div id="HeaderForDesc"> 
+                Printed below is a query of the building the user entered
             </div>
 
             <?php
@@ -57,9 +62,9 @@
                     <tr>
                         <td> Builidng id: <?=$row["BuildingId"]?></td>
                         <br>
-                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <td> Building Name: <?=$row["Buildingname"]?></td>
                         <br>
-                        <td> Class Id<?=$row["ClassId"]?></td>
+                        <td> Class Id: <?=$row["ClassId"]?></td>
                     </td>
                 <?php
                     }
@@ -81,8 +86,8 @@
 
             <div id="middleDatashow">
 
-                <div> 
-                    Print below the building the user entered with class id 
+                <div id="HeaderForDesc"> 
+                    Printed below is a query of the Class the user entered with class id 
                 </div>
 
                 <?php
@@ -119,9 +124,9 @@
                         <tr>
                             <td> class id: <?=$row["ClassId"]?></td>
                             <br>
-                            <td> class Name <?=$row["ClassName"]?></td>
+                            <td> class Name: <?=$row["ClassName"]?></td>
                             <br>
-                            <td> building Id<?=$row["BuildingId"]?></td>
+                            <td> building Id: <?=$row["BuildingId"]?></td>
                         </td>
                     <?php
                         }
@@ -180,9 +185,9 @@
                     <tr>
                         <td> Builidng id: <?=$row["BuildingId"]?></td>
                         <br>
-                        <td> Building Name <?=$row["BuildingName"]?></td>
+                        <td> Building Name: <?=$row["BuildingName"]?></td>
                         <br>
-                        <td> Class Id<?=$row["ClassId"]?></td>
+                        <td> Class Id: <?=$row["ClassId"]?></td>
                         <br>
                     </td>
                 <?php
@@ -234,11 +239,11 @@
             ?>
                 <tr>
                     <br>
-                    <td> Class Id <a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
+                    <td> Class Id: <a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
                     <br>
-                    <td> Class Name <a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
+                    <td> Class Name: <a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
                     <br>
-                    <td> Building Id<a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
+                    <td> Building Id: <a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
                     <br>
                 </td>
             <?php

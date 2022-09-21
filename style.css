@@ -24,12 +24,14 @@
     width: 100%;
     float: left;
 }
-
-
 #middleDatashow{
     background-color: azure;
-    height: 100px;
+    height: 150px;
     font-size: 15px;
     line-height: 25px;
     width: 100%;
+}
+#HeaderForDesc{
+    font-size: 20px;
+    font-weight: bold;
 }

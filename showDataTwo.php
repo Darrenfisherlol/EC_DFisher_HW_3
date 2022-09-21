@@ -17,6 +17,8 @@
                 <th>ProfessorName</th>
                 <th>SpellCastingLevel</th>
                 <th>BuildingID</th>
+                <th>BuildingName</th>
+
             </tr>
         </thead>
             <tbody>
@@ -36,7 +38,7 @@
                 $iid = $_GET['ProfessorID'];
                 //echo $iid;
 
-                $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID=" . $iid;
+                $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID, b.BuildingName from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID";
                 //echo $sql;
                 $result = $conn->query($sql);
 
@@ -49,6 +51,7 @@
                     <td><?=$row["ProfessorName"]?></td>
                     <td><?=$row["SpellCastingLevel"]?></td>
                     <td><?=$row["BuildingID"]?></td>
+                    <td><?=$row["BuildingName"]?></td>
                     </tr>
                 <?php
                 }

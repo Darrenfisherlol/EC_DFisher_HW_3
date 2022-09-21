@@ -180,6 +180,9 @@
             $Varname = $_POST["ClassId"];  
 
             $sql = "SELECT * FROM Class WHERE ClassId = $Varname";
+
+            echo $sql;
+
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

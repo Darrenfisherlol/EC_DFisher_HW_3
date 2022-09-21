@@ -21,11 +21,12 @@
         <br>
         <div>^^ get all from class where class id = what user input</div>
         <br>
+        <br>
 
 
 
-<!-- 2nd middle part of page -->
-<div id="middleDatashow">
+    <!-- 2nd middle part of page -->
+    <div id="middleDatashow">
             
             The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
 
@@ -79,7 +80,85 @@
         <br>
 
 
+    <!-- TESTER -->
+    <div>
 
+        <?php
+
+        $Varname = $_POST["BuildingName"];  
+
+        $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
+
+        echo $sql;
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+        ?>
+            <tr>
+                <td> Builidng id: <?=$row["BuildingId"]?></td>
+                <br>
+                <td> Building Name <?=$row["Buildingname"]?></td>
+                <br>
+                <td> Class Id<?=$row["ClassId"]?></td>
+            </td>
+        <?php
+            }
+        } 
+        else {
+            echo "0 results";
+        }
+
+        $conn->close();
+        ?>
+
+        </div>
+
+        <br>
+        <div>^^ Sorts by what the user entered as a building name</div>
+        <br>
+
+
+        <div>
+
+        <?php
+
+        $Varname = $_POST["ClassId"];  
+
+        $sql = "SELECT * FROM Class WHERE ClassId = $Varname";
+
+        echo $sql;
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+        ?>
+            <tr>
+                <td> class id: <?=$row["ClassId"]?></td>
+                <br>
+                <td> class Name <?=$row["ClassName"]?></td>
+                <br>
+                <td> building Id<?=$row["BuildingId"]?></td>
+            </td>
+        <?php
+            }
+        } 
+        else {
+            echo "0 results";
+        }
+
+        $conn->close();
+        ?>
+
+        <br>
+        <div>^^ user choose class id amd ^ displays it </div>
+        <br>
+
+    </div>
 
 
 

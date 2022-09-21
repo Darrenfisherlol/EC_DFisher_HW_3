@@ -17,17 +17,15 @@
     width: 100%;
 }
 
-
-
 #divTwo{
-    background-color: lightskyblue;
+    background-color: azure;
     height: 100px;
-    text-align: center;
-    line-height: 100px;
-    font-size: 50px;
-    float: left;
-    width: 100%;
+    font-size: 25px;
+    line-height: 25px;
 }
+
+
+
 #divThree{
     background-color: lightblue;
     height: 200px;
@@ -36,7 +34,3 @@
     float: left;
     width: 100%;
 }
-
-   
-
-

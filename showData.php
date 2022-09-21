@@ -8,21 +8,11 @@
     <div id="Background">
 
 
-        <div id="divOne">
+        <div id="divTwo">
             The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br>
             Your StudentId is: <?php echo $_POST["StudentId"]; ?><br>    
             The ProfessorID is: <?php echo $_POST["ProfessorID"]; ?>    
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-        <div>       
-            Hi <?php echo $_POST["BuildingName"]; ?><br>
-            Your school is: <?php echo $_POST["ProfessorID"]; ?><br>
-            Your favorite class is: <?php echo $_POST["StudentId"]; ?>            
         </div>
 
 

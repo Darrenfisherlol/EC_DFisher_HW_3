@@ -62,7 +62,7 @@
                     <tr>
                         <td> Builidng id: <?=$row["BuildingId"]?></td>
                         <br>
-                        <td> Building Name: <?=$row["Buildingname"]?></td>
+                        <td> Building Name: <?=$row["BuildingName"]?></td>
                         <br>
                         <td> Class Id: <?=$row["ClassId"]?></td>
                     </td>
@@ -190,11 +190,15 @@
 
         </div>
 
+        <br>
+        <br>
+        <br>
+        <br>
 
         <div id="middleDataShowBigger">
             
             <div id="HeaderForDesc"> 
-                Href print below
+                Which professor fo you want more information for?
             </div>
 
             <?php

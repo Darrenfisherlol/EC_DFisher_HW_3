@@ -14,11 +14,8 @@
         </div>
 
         <br>
-        <br>
-        <br>
         
-        <!-- This is the 2st 1/2 of the page top section-->
-
+        <!-- Top that displays the class with the ID entered -->
         <div id="headerShowDate">
             <?php
                 $servername = "localhost";
@@ -40,7 +37,10 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT * FROM Class";
+            $sql = "SELECT * FROM Class where ClassId = ".echo $_POST["ClassId"];."";
+
+            echo $sql;
+
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -60,45 +60,14 @@
                 echo "0 results";
             }
 
-            ?>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <?php
-
-            $sql = "SELECT * FROM Building";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_assoc()) {
-            ?>
-                <tr>
-                    <td><?=$row["ClassId"]?></td>
-                    <td><?=$row["ClassName"]?></td>
-                    <td><?=$row["BuildingId"]?></td>
-
-                </td>
-            <?php
-                }
-            } 
-            else {
-                echo "0 results";
-            }
-
-            $conn->close();
             ?>
         </div>
 
-            <br>
-            <br>
-            <br>
-            middle
-            <br>
-            <br>
-            <br>
+
+        <br>
+        <div>^^ get all from class where class id = what user input</div>
+        <br>
+
 
         <!-- 2nd middle part of page -->
         <div id="middleDatashow">
@@ -106,6 +75,24 @@
             The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
 
             <?php
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+            // Create connection
+            $conn = new mysqli($servername, $username, $password);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
@@ -131,14 +118,12 @@
 
         </div>
 
+
         <br>
-        <br>
-        bot test
-        <br>
-        <br>
+        <div>^^ User chooses href to go to another page & sort by it</div>
         <br>
 
-        
+
         <!-- TESTER -->
         <div>
 
@@ -149,7 +134,7 @@
                 $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
 
                 echo $sql;
-                
+
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -174,6 +159,10 @@
             ?>
 
         </div>
+
+        <br>
+        <div>^^ Sorts by what the user entered as a building name</div>
+        <br>
 
 
         <div>

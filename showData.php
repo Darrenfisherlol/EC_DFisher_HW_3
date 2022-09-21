@@ -139,70 +139,78 @@
         <br>
 
         
-<!-- TESTER -->
-<div>
+        <!-- TESTER -->
+        <div>
 
-    <?php
+            <?php
 
-        $Varname = $_POST["BuildingName"];  
+                $Varname = $_POST["BuildingName"];  
 
-        $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
-        $result = $conn->query($sql);
+                $sql = "SELECT * FROM Building WHERE BuildingName like '" . $Varname . "'";
+                $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td> Builidng id: <?=$row["BuildingId"]?></td>
-                <br>
-                <td> Building Name <?=$row["Buildingname"]?></td>
-                <br>
-                <td> Class Id<?=$row["ClassId"]?></td>
-            </td>
-        <?php
-            }
-        } 
-        else {
-            echo "0 results";
-        }
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Builidng id: <?=$row["BuildingId"]?></td>
+                        <br>
+                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <br>
+                        <td> Class Id<?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
 
-    $conn->close();
-    ?>
+            $conn->close();
+            ?>
+
+        </div>
 
 
 
 
-<?php
+        <div>
 
-        $Varname = $_POST["BuildingName"];  
+            <?php
 
-        $sql = "SELECT * FROM Building WHERE BuildingName like 'Price';
-        $result = $conn->query($sql);
+                $Varname = $_POST["BuildingName"];  
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td> Builidng id: <?=$row["BuildingId"]?></td>
-                <br>
-                <td> Building Name <?=$row["Buildingname"]?></td>
-                <br>
-                <td> Class Id<?=$row["ClassId"]?></td>
-            </td>
-        <?php
-            }
-        } 
-        else {
-            echo "0 results";
-        }
+                $sql = "SELECT * FROM Building WHERE BuildingName like 'Price'";
+                $result = $conn->query($sql);
 
-    $conn->close();
-    ?>
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Builidng id: <?=$row["BuildingId"]?></td>
+                        <br>
+                        <td> Building Name <?=$row["Buildingname"]?></td>
+                        <br>
+                        <td> Class Id<?=$row["ClassId"]?></td>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
 
-</div>
+            $conn->close();
+            ?>
 
-    
+        </div>
+
+
+
+
+    </div>
+
 </body>
 </hmtl>

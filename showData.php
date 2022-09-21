@@ -19,7 +19,9 @@
         <br>
         <br>
         
+
         <!-- This is the 2st 1/2 of the page top section-->
+
         <div id="headerShowDate">
             <?php
                 $servername = "localhost";
@@ -99,16 +101,23 @@
             $sql = "SELECT ClassId, ClassName, BuildingId FROM Class";
             $result = $conn->query($sql);
 
+            ?>         
+            
+            The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
+
+            <?php
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
             ?>
                 <tr>
+                    <br>
                     <td> Class Id <a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
                     <br>
                     <td> Class Name <a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
                     <br>
                     <td> Building Id<a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
+                    <br>
                 </td>
             <?php
                 }
@@ -130,6 +139,40 @@
         <br>
 
         
+<!-- TESTER -->
+<div>
+
+<?php
+
+    $Varname = ?> <?php echo $_POST["BuildingName"]; ?> <?php   
+
+    $sql = "SELECT * FROM Building WHERE BuildingName like ?> '$Varname' ";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+    ?>
+        <tr>
+            <td> Builidng id: <?=$row["BuildingId"]?></td>
+            <br>
+            <td> Building Name <?=$row["Buildingname"]?></td>
+            <br>
+            <td> Class Id<?=$row["ClassId"]?></td>
+        </td>
+    <?php
+        }
+    } 
+    else {
+        echo "0 results";
+    }
+
+$conn->close();
+?>
+
+</div>
+
+
 
     </div>
 

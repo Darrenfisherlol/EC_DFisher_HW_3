@@ -96,10 +96,9 @@
                 while($row = $result->fetch_assoc()) {
             ?>
                 <tr>
-                    <td><a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
-                    <td><a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
-                    <td><a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
-
+                    <td> Class Id <a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
+                    <td> Class Name <a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
+                    <td> Building Id<a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
                 </td>
             <?php
                 }

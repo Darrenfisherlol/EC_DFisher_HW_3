@@ -14,22 +14,20 @@
                 Adams or Price? : <input type="text" name="BuildingName"><br>
             </div> 
 
+            <div id="divOne"> 
             Is your StudentId 201 or 202? : <input type="text" name="StudentId"><br>
             </div> 
+
             
-            <!--
             <div id="divOne">
                 Are you sign up class 3001 or 3002? : <input type="text" name="ClassId"><br>
             </div> 
-            -->
-            <div id="divOne"> 
-
-            <!--
+            
             <div id="divOne"> 
                 The ProfessorID id 1001 or 1002? : <input type="text" name="ProfessorID"><br>
             </div> 
 
-            -->
+            
             <div id="divOne">
                 <input type="submit">
             </div> 

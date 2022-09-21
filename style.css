@@ -23,25 +23,8 @@
     line-height: 25px;
     width: 100%;
     float: left;
-    border: 1cm;
-    border-style: solid;
 }
-#ShowTwoInputs{
-    background-color: azure;
-    height: 100px;
-    font-size: 15px;
-    line-height: 25px;
-    width: 100%;
-    border: 1cm;
-    border-style: solid;
-}
-#ShowTwoInputsHalf{
-    background-color: azure;
-    height: 100px;
-    font-size: 15px;
-    line-height: 25px;
-    width: 100%;
-}
+
 
 #middleDatashow{
     background-color: azure;
@@ -49,6 +32,4 @@
     font-size: 15px;
     line-height: 25px;
     width: 100%;
-    border: 1cm;
-    border-style: solid;
 }

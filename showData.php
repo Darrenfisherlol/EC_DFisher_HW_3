@@ -13,15 +13,6 @@
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br> 
         </div>
 
-        <div id="ShowTwoInputs">
-            <div id="ShowTwoInputsHalf">
-                AAA
-            </div>
-            <div id="ShowTwoInputsHalf">
-                BBB
-            </div>
-        </div>
-
 
         <br>
         <br>

@@ -97,7 +97,9 @@
             ?>
                 <tr>
                     <td> Class Id <a href="ClassId.php?id="><?=$row["ClassId"]?></a></td>
+                    <br>
                     <td> Class Name <a href="ClassName.php?id="> <?=$row["ClassName"]?></a> </td>
+                    <br>
                     <td> Building Id<a href="BuildingId.php?id="> <?=$row["BuildingId"]?></a> </td>
                 </td>
             <?php
@@ -110,13 +112,42 @@
             $conn->close();
             ?>
 
+        </div>
 
+        <br>
+        <br>
+        <br>
 
+        <!-- TESTER -->
+        <div>
+            <?php
+      
+                $sql = "SELECT * FROM Building WHERE BuildingName like '<?php echo $_POST["BuildingName"]; ?>'";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                    ?>
+                        <tr>
+                        <td><?=$row["BuildingId"]?></td>
+                            <br>
+                            <td><?=$row["Buildingname"]?></td>
+                            <br>
+                            <td><?=$row["ClassId"]?></td>
+                        </td>
+                    <?php
+                        }
+                    } 
+                    else {
+                        echo "0 results";
+                    }
+
+            $conn->close();
+            ?>
 
 
 
         </div>
-
-        
 
     </div>

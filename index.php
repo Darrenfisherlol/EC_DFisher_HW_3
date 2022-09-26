@@ -184,10 +184,65 @@
                 $conn->close();
             ?>
         </div>
+        
+        <div id="middleDataShowBigger"> 
+
+            <div id="HeaderForDesc">
+                All students and classes
+            </div>
+
+            <?php
+
+                $servername = "localhost";
+                $username = "darrenfi_homework3";
+                $password = "MISHomework3";
+                $dbname = "darrenfi_homework_3";
+                // Create connection
+                $conn = new mysqli($servername, $username, $password);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT StudentFirstName, StudentId, StudentLastName, ClassName  FROM Student s join Class c on s.ClassId=c.ClassId";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td> Student: <?=$row["StudentFirstName"]?> <?=$row["StudentLastName"]?></td>
+                        <br>
+                        <td> Student Id: <?=$row["StudentId"]?></td>
+                        <br>
+                        <td> Class name: <?=$row["ClassName"]?></td>
+                        <br>
+                    </td>
+                <?php
+                    }
+                } 
+                else {
+                    echo "0 results";
+                }
+                $conn->close();
+            ?>
+        </div>
+
+
 
         <div id="middleDataShowBigger">
             
-        <br>
+            <br>
 
             <div id="HeaderForDesc"> 
                 Which builidng do you want to sort by?
@@ -197,6 +252,21 @@
 
             <a class="btn btn-info" href="adamData.php"  role="button"> Adam Price</a> 
             <a class="btn btn-info" href="priceData.php"  role="button"> Price Data</a> 
+
+        </div>
+
+
+        <div id="middleDataShowBigger">            
+            
+            <br>
+
+            <div id="HeaderForDesc"> 
+                Level two data:
+            </div>
+
+            <br>
+
+            <a class="btn btn-info" href="showDataTwo.php"  role="button"> Professors & building</a> 
 
         </div>
 

@@ -198,56 +198,13 @@
         <div id="middleDataShowBigger">
             
             <div id="HeaderForDesc"> 
-                Which professor fo you want more information for?
+                Which builidng do you want to sort by?
             </div>
-
-            <?php
-
-            $servername = "localhost";
-            $username = "darrenfi_homework3";
-            $password = "MISHomework3";
-            $dbname = "darrenfi_homework_3";
-            // Create connection
-            $conn = new mysqli($servername, $username, $password);
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-            }
-
-            $sql = "SELECT ProfessorID, ProfessorName from Professor";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-            ?>
-            <tr>
-                <td><?=$row["ProfessorID"]?></td>
-                <td>
-                    <a href="showDataTwo.php?id=<?=$row["ProfessorID"]?>"><?=$row["ProfessorName"]?></a> 
-                    <br>                   
-                </td>
-            </tr>
-            <?php
-            }
-            } else {
-            echo "0 results";
-            }
-
-            $conn->close();
-            ?>
+            
+            <a class="btn btn-primary" href="adamData.php"  role="button"> Adam Price</a> 
+            <a class="btn btn-primary" href="priceDataTwo.php"  role="button"> Price Data</a> 
 
         </div>
-
-
-
-
-
-
-
 
     </div>
 

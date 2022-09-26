@@ -18,9 +18,14 @@
 
         <!-- Pages -->
         <div>
-            <a class="btn btn-primary" href="index.php"  role="button">Home Page </a> 
-            <a class="btn btn-primary" href="showData.php"  role="button">Show Data Page One </a> 
-            <a class="btn btn-primary" href="showDataTwo.php"  role="button">Show Data Page Two </a> 
+            <a class="btn btn-primary" href="index.php"  role="button"> Form for php </a> 
+            <a class="btn btn-primary" href="showData.php"  role="button"> Home </a> 
+
+            <a class="btn btn-primary" href="adamData.php"  role="button"> Adam Price</a> 
+            <a class="btn btn-primary" href="priceDataTwo.php"  role="button"> Price Data</a> 
+
+            <a class="btn btn-primary" href="showDataTwo.php"  role="button"> Show Data 2 levels </a> 
+
         </div>
 
         <div>

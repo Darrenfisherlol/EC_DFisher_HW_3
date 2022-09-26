@@ -7,7 +7,7 @@
 
     <div>
 
-        <form action="showData.php" method="post">
+        <form action="index.php" method="post">
             
             <div id="divOne"> 
                 Adams or Price? : <input type="text" name="BuildingName"><br>

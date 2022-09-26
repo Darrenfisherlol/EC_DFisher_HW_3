@@ -11,7 +11,7 @@
         <div id="headerShowDate">
         
         <div id="HeaderForDesc">
-            Here is your input:
+            PHP post output:
         </div>
             The building you wanted is: <?php echo $_POST["BuildingName"]; ?><br>
             The class you signed up for is: <?php echo $_POST["ClassId"]; ?><br> 
@@ -23,7 +23,7 @@
         <div id="middleDatashow">
 
             <div id="HeaderForDesc"> 
-                Printed below is a query of the building the user entered
+                Query of the building the user entered
             </div>
 
             <?php
@@ -79,7 +79,7 @@
         <div id="middleDatashow">
 
             <div id="HeaderForDesc"> 
-                Printed below is a query of the Class the user entered with class id 
+                Query of the Class the user entered with class id 
             </div>
 
             <?php
@@ -135,7 +135,7 @@
         <div id="middleDataShowBigger"> 
 
             <div id="HeaderForDesc">
-                This will print out all building info
+                All building info to compare
             </div>
 
             <?php

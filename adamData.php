@@ -47,8 +47,8 @@
                 while($row = $result->fetch_assoc()) {
                 ?>
                     <tr>
-                    <td><?=$row["ProfessorID"]?></td>
-                    <td><?=$row["ProfessorName"]?></td>
+                    <td><?=$row["ProfessorID"]?> </td>
+                    <td><?=$row["ProfessorName"]?> </td>
                     <td><?=$row["SpellCastingLevel"]?></td>
                     <td><?=$row["BuildingID"]?></td>
                     <td><?=$row["BuildingName"]?></td>

@@ -184,15 +184,10 @@
                 else {
                     echo "0 results";
                 }
-
                 $conn->close();
             ?>
-
         </div>
 
-        <br>
-        <br>
-        <br>
         <br>
 
         <div id="middleDataShowBigger">
@@ -200,9 +195,11 @@
             <div id="HeaderForDesc"> 
                 Which builidng do you want to sort by?
             </div>
-            
+
+            <br>
+
             <a class="btn btn-primary" href="adamData.php"  role="button"> Adam Price</a> 
-            <a class="btn btn-primary" href="priceDataTwo.php"  role="button"> Price Data</a> 
+            <a class="btn btn-primary" href="priceData.php"  role="button"> Price Data</a> 
 
         </div>
 

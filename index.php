@@ -23,7 +23,7 @@
         <div id="middleDatashow">
 
             <div id="HeaderForDesc"> 
-                Query of the building the user entered
+                Query of the building the user entered:
             </div>
 
             <?php
@@ -81,7 +81,7 @@
             <br>
 
             <div id="HeaderForDesc"> 
-                Query of the Class the user entered
+                Query of the Class the user entered:
             </div>
 
             <?php
@@ -137,7 +137,7 @@
         <div id="middleDataShowBigger"> 
 
             <div id="HeaderForDesc">
-                Building information
+                Building information:
             </div>
 
             <?php
@@ -192,7 +192,7 @@
             <br>
 
             <div id="HeaderForDesc">
-                Students at OU 
+                Students at OU:
             </div>
 
             <?php
@@ -263,12 +263,12 @@
         <div id="middleDatashow">            
         
             <div id="HeaderForDesc"> 
-                Level two data:
+                Check out level two data:
             </div>
 
             <br>
 
-            <a class="btn btn-info" href="showDataTwo.php"  role="button"> Professors & building</a> 
+            <a class="btn btn-info" href="showDataTwo.php"  role="button"> Professors & Building</a> 
 
         </div>
 

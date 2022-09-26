@@ -186,6 +186,8 @@
         </div>
         
         <div id="middleDataShowBigger"> 
+            
+            <br>
 
             <div id="HeaderForDesc">
                 All students and classes
@@ -240,7 +242,7 @@
 
 
 
-        <div id="middleDataShowBigger">
+        <div id="middleDatashow">
             
             <br>
 
@@ -256,10 +258,8 @@
         </div>
 
 
-        <div id="middleDataShowBigger">            
-            
-            <br>
-
+        <div id="middleDatashow">            
+        
             <div id="HeaderForDesc"> 
                 Level two data:
             </div>

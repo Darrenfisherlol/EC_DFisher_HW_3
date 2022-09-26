@@ -185,18 +185,18 @@
             ?>
         </div>
 
-        <br>
-
         <div id="middleDataShowBigger">
             
+        <br>
+
             <div id="HeaderForDesc"> 
                 Which builidng do you want to sort by?
             </div>
 
             <br>
 
-            <a class="btn btn-primary" href="adamData.php"  role="button"> Adam Price</a> 
-            <a class="btn btn-primary" href="priceData.php"  role="button"> Price Data</a> 
+            <a class="btn btn-info" href="adamData.php"  role="button"> Adam Price</a> 
+            <a class="btn btn-info" href="priceData.php"  role="button"> Price Data</a> 
 
         </div>
 

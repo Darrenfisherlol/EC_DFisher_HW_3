@@ -81,7 +81,7 @@
             <br>
 
             <div id="HeaderForDesc"> 
-                Query of the Class the user entered with class id 
+                Query of the Class the user entered
             </div>
 
             <?php

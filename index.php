@@ -77,6 +77,8 @@
         </div>
 
         <div id="middleDatashow">
+            
+            <br>
 
             <div id="HeaderForDesc"> 
                 Query of the Class the user entered with class id 
@@ -135,7 +137,7 @@
         <div id="middleDataShowBigger"> 
 
             <div id="HeaderForDesc">
-                All building info to compare
+                Building information
             </div>
 
             <?php
@@ -190,7 +192,7 @@
             <br>
 
             <div id="HeaderForDesc">
-                All students and classes
+                Students at OU 
             </div>
 
             <?php

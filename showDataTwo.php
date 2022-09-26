@@ -7,7 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <h1>Professors</h1>
+    <h1>Professors Building</h1>
 
     <div class="card-group">
         <?php
@@ -47,7 +47,9 @@
                     $section_result = $conn->query($section_sql);
                     
                     while($section_row = $section_result->fetch_assoc()) {
-                    echo "<li>" . $section_row["SpellCastingLevel"] . "</li>";
+                        echo "<li>" . $section_row["BuildingName"] . "</li>";
+                        echo "<li>" . $section_row["BuildingID"] . "</li>";
+                        echo "<li>" . $section_row["SpellCastingLevel"] . "</li>";
                     }
                 ?>
                 </ul></p>

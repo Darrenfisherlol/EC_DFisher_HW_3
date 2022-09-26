@@ -47,8 +47,8 @@
                     $section_result = $conn->query($section_sql);
                     
                     while($section_row = $section_result->fetch_assoc()) {
-                        echo "<li> Building" . $section_row["BuildingName"] . "</li>";
-                        echo "<li> ID" . $section_row["BuildingID"] . "</li>";
+                        echo "<li> Building Name :" . $section_row["BuildingName"] . "</li>";
+                        echo "<li> ID: " . $section_row["BuildingID"] . "</li>";
                     }
                 ?>
                 </ul></p>

@@ -73,7 +73,7 @@
 
                 $conn->close();
             ?>
-
+            <br>
         </div>
 
         <div id="middleDatashow">

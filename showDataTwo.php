@@ -31,7 +31,7 @@
             die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID, b.BuildingName, b.buildingColor from Professor p join Building b on p.BuildingID=b.BuildingID";
+            $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID, b.BuildingName, b.buildingColor, b.buildingSize from Professor p join Building b on p.BuildingID=b.BuildingID";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -43,12 +43,13 @@
                 <h5 class="card-title"><?=$row["ProfessorName"]?></h5>
                 <p class="card-text"><ul>
                 <?php
-                    $section_sql = "select p.ProfessorID, p.ProfessorName, p.SpellCastingLevel, b.BuildingID, b.BuildingName, b.buildingColor from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID=" . $row["ProfessorID"];
+                    $section_sql = "select p.ProfessorID, p.ProfessorName, p.SpellCastingLevel, b.BuildingID, b.BuildingName, b.buildingColor, b.buildingSize from Professor p join Building b on p.BuildingID=b.BuildingID where p.ProfessorID=" . $row["ProfessorID"];
                     $section_result = $conn->query($section_sql);
                     
                     while($section_row = $section_result->fetch_assoc()) {
                         echo "<li> Building Name : " . $section_row["BuildingName"] . "</li>";
                         echo "<li> Building Color: " . $section_row["buildingColor"] . "</li>";
+                        echo "<li> Building Size: " . $section_row["buildingSize"] . "</li>";
                         echo "<li> Building ID: " . $section_row["BuildingID"] . "</li>";
 
                     }

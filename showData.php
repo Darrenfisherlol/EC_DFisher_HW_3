@@ -7,7 +7,7 @@
 
     <div>
 
-        <form action="postFilter.php" method="post">
+        <form action="outputShowData.php" method="post">
             
             <div id="divOne"> 
                 Adams or Price? : <input type="text" name="BuildingName"><br>

@@ -52,7 +52,7 @@
                         <td><?=$row["buildingColor"]?></td>
                         <td><?=$row["buildingSize"]?></td>
                     
-                        <td><a href="buildingHyperlink.php?id=<?=$row["BuildingName"]?>"><?=$row["BuildingName"]?></a></td>
+                        <td><a href="buildingHyperlink.php?BuildingName=<?=$row["BuildingName"]?>"><?=$row["BuildingName"]?></a></td>
 
 
                     </tr>

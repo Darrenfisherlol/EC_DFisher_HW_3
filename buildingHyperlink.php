@@ -37,7 +37,7 @@
                 }
                 //echo $iid;
 
-                $Varname = $_POST["BuildingName"];  
+                $Varname = $_GET["BuildingName"];  
 
                 $sql = "select BuildingId,BuildingName,ClassId,buildingColor,buildingSize from Building where BuildingName like '" . $Varname . "'";
                 //echo $sql;

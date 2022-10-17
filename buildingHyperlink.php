@@ -41,7 +41,7 @@
 
                     $Varname = $_GET["BuildingName"];  
 
-                    $sql = "select ProfessorID, ProfessorName, b.BuildingID, b.BuildingName, ClassId, buildingColor, buildingSize from Professor p join Building b on p.BuildingID=b.BuildingID where b.BuildingName like '" . $Varname . "'";
+                    $sql = "select ProfessorID, ProfessorName, b.BuildingId, b.BuildingName, ClassId, buildingColor, buildingSize from Professor p join Building b on p.BuildingID=b.BuildingID where b.BuildingName like '" . $Varname . "'";
                     //echo $sql;
                     $result = $conn->query($sql);
 

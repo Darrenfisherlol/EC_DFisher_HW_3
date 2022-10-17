@@ -13,11 +13,11 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ProfessorID</th>
-                <th>ProfessorName</th>
-                <th>SpellCastingLevel</th>
-                <th>BuildingID</th>
+                <th>BuildingId</th>
                 <th>BuildingName</th>
+                <th>ClassId</th>
+                <th>buildingColor</th>
+                <th>buildingSize</th>
 
             </tr>
         </thead>
@@ -37,9 +37,9 @@
                 }
                 //echo $iid;
 
-                $Varname = $POST['BuildingName'];
+                $Varname = $_POST["BuildingName"];  
 
-                $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID, b.BuildingName from Professor p join Building b on p.BuildingID=b.BuildingID where b.BuildingName like '" . $Varname . "'";
+                $sql = "select BuildingId,BuildingName,ClassId,buildingColor,buildingSize from Building where BuildingName like '" . $Varname . "'";
                 //echo $sql;
                 $result = $conn->query($sql);
 
@@ -48,11 +48,15 @@
                 while($row = $result->fetch_assoc()) {
                 ?>
                     <tr>
-                    <td><?=$row["ProfessorID"]?> </td>
-                    <td><?=$row["ProfessorName"]?> </td>
-                    <td><?=$row["SpellCastingLevel"]?></td>
-                    <td><?=$row["BuildingID"]?></td>
-                    <td><?=$row["BuildingName"]?></td>
+                        <td><?=$row["BuildingId"]?> </td>
+                        <td><?=$row["BuildingName"]?> </td>
+                        <td><?=$row["ClassId"]?></td>
+                        <td><?=$row["buildingColor"]?></td>
+                        <td><?=$row["buildingSize"]?></td>
+                    
+                        <td><d href="buildingHyperlink?BuildingName=<?=$row["BuildingName"]?>"><?=$row["BuildingName"]?></td>
+
+
                     </tr>
                 <?php
                 }

@@ -21,10 +21,12 @@
             <a class="btn btn-primary" href="index.php"  role="button"> Home </a> 
             <a class="btn btn-primary" href="showData.php"  role="button"> Post Filter </a> 
 
-            <a class="btn btn-primary" href="adamData.php"  role="button"> Link Filter Adam Price</a> 
-            <a class="btn btn-primary" href="priceData.php"  role="button"> Link Filter Price Data</a> 
+            <a class="btn btn-primary" href="adamData.php"  role="button"> Adams and Professor</a> 
+            <a class="btn btn-primary" href="priceData.php"  role="button"> Price and Professor</a> 
 
-            <a class="btn btn-primary" href="showDataTwo.php"  role="button"> Show Data 2 levels </a> 
+            <a class="btn btn-primary" href="showDataTwo.php"  role="button"> Professor and Building table </a> 
+            <a class="btn btn-primary" href="student.php"  role="button"> Student Table </a> 
+            <a class="btn btn-primary" href="class.php"  role="button"> Class Table </a> 
 
         </div>
 

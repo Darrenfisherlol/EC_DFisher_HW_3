@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <h1> Professors in Price</h1>
+    <h1> All Buildings</h1>
 
     <table class="table table-striped">
         <thead>
@@ -52,7 +52,7 @@
                         <td><?=$row["buildingColor"]?></td>
                         <td><?=$row["buildingSize"]?></td>
                     
-                        <td><d href="buildingHyperlink?BuildingName=<?=$row["BuildingName"]?>"><?=$row["BuildingName"]?></td>
+                        <td><a href="buildingHyperlink.php?id=<?=$row["BuildingName"]?>"><?=$row["BuildingName"]?></a></td>
 
 
                     </tr>

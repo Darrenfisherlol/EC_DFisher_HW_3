@@ -35,7 +35,6 @@
                 if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
                 }
-                $iid = $_GET['ProfessorID'];
                 //echo $iid;
 
                 $sql = "select ProfessorID, ProfessorName, SpellCastingLevel, b.BuildingID, b.BuildingName from Professor p join Building b on p.BuildingID=b.BuildingID where b.BuildingName = 'Adams'";

@@ -35,7 +35,6 @@
                 die("Connection failed: " . $conn->connect_error);
                 }
                 
-                $VarnameBuilding = $_POST["ProfessorName"];  
                 //where b.BuildingName = $VarnameBuilding
 
                 $sql = "select StudentId, StudentFirstName, StudentLastName, ClassId from Student";

@@ -19,7 +19,9 @@
         <!-- Pages -->
         <div>
             <a class="btn btn-primary" href="index.php"  role="button"> Home </a> 
+            
             <a class="btn btn-primary" href="showData.php"  role="button"> Post Filter </a> 
+            <a class="btn btn-primary" href="postFilter.php"  role="button"> Post Output </a> 
 
             <a class="btn btn-primary" href="adamData.php"  role="button"> Adams and Professor</a> 
             <a class="btn btn-primary" href="priceData.php"  role="button"> Price and Professor</a> 

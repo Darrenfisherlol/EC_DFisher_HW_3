@@ -8,11 +8,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <h1> Professors in Price</h1>
+    <h1> Filter Building</h1>
 
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>ProfessorID</th>
+                <th>ProfessorName</th>
                 <th>BuildingId</th>
                 <th>BuildingName</th>
                 <th>ClassId</th>
@@ -39,7 +41,7 @@
 
                 $Varname = $_GET["BuildingName"];  
 
-                $sql = "select BuildingId,BuildingName,ClassId,buildingColor,buildingSize from Building where BuildingName like '" . $Varname . "'";
+                $sql = "select BuildingId,BuildingName,ClassId,buildingColor,buildingSize from Building b join Professor p on b.BuildingId=p.BuildingId where BuildingName like '" . $Varname . "'";
                 //echo $sql;
                 $result = $conn->query($sql);
 
@@ -48,6 +50,8 @@
                 while($row = $result->fetch_assoc()) {
                 ?>
                     <tr>
+                        <td><?=$row["ProfessorID"]?> </td>
+                        <td><?=$row["ProfessorName"]?> </td>
                         <td><?=$row["BuildingId"]?> </td>
                         <td><?=$row["BuildingName"]?> </td>
                         <td><?=$row["ClassId"]?></td>

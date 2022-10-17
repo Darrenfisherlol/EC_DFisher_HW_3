@@ -22,8 +22,7 @@
 
             <a class="btn btn-primary" href="showData.php"  role="button"> Post Filter </a> 
 
-            <a class="btn btn-primary" href="buildingAll.php"  role="button"> All builidng</a> 
-            <a class="btn btn-primary" href="buildingHyperlink.php"  role="button"> Hyperlink</a> 
+            <a class="btn btn-primary" href="buildingAll.php"  role="button"> All builidng & hyperlink</a> 
 
             <a class="btn btn-primary" href="adamData.php"  role="button"> Adams and Professor</a> 
             <a class="btn btn-primary" href="priceData.php"  role="button"> Price and Professor</a> 

@@ -19,7 +19,7 @@
         <!-- Pages -->
         <div>
             <a class="btn btn-primary" href="index.php"  role="button"> Home </a> 
-            
+
             <a class="btn btn-primary" href="showData.php"  role="button"> Post Filter </a> 
             <a class="btn btn-primary" href="postFilter.php"  role="button"> Post Output </a> 
 
